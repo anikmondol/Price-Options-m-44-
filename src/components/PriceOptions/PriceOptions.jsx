@@ -28,7 +28,7 @@ const PriceOptions = () => {
                 "Group fitness classes",
                 "Access to locker room"
             ],
-            "price": 50.00
+            "price": 50.0
         },
         {
             "id": 3,
