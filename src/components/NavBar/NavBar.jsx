@@ -18,7 +18,7 @@ const NavBar = () => {
 
 
     return (
-        <nav className="flex justify-between mx-3 items-start md:items-center mt-2">
+        <nav className="flex justify-between mx-3   mt-2 text-black bg-yellow-200 p-2 content-center rounded-lg">
             
             <section>
                 <div className="md:hidden text-3xl" onClick={() => setOpen(!open)}>
@@ -29,13 +29,15 @@ const NavBar = () => {
                 
 
                 </div>
-            <ul className="md:flex">
+            <ul className={`md:flex duration-1000 absolute md:static 
+            ${open ? 'top-12' :  '-top-60'}
+            bg-yellow-200 mt-3 px-5 rounded-lg pb-2`}>
                 {
                     routes.map((route, index) => <Link key={index} route={route}></Link>)
                 }
             </ul>
             </section>
-            <button className="bg-yellow-300 text-red-400 p-3 rounded-xl font-medium">Add Now</button>
+            <button className="bg-green-500 text-white p-3 rounded-md font-medium">Add Now</button>
         </nav>
     );
 };
